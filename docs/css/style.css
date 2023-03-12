@@ -810,7 +810,7 @@ a {
   }
 }
 .header {
-  background-image: url("../img/header_img__full.png");
+  background-image: url("../img/header_img__full.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
