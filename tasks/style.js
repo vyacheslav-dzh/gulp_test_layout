@@ -17,6 +17,6 @@ module.exports = function style() {
             cascade: false 
         }))
         .pipe(concat('style.css'))
-        .pipe(dest('build/css/'))
+        .pipe(dest('docs/css/'))
     .pipe(bs.stream())
 }
