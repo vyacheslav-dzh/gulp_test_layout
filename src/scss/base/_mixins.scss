@@ -1,0 +1,48 @@
+@mixin font-face($name, $file, $weight: 400, $style: normal) {
+	@font-face {
+		font-family: "#{$name}";
+		src: local("#{$file}"),
+            url('../fonts/#{$file}.woff2') format('woff2'),
+            url('../fonts/#{$file}.woff') format('woff');
+		font-weight: $weight;
+		font-style: $style;
+		font-display: swap;
+	}
+}
+
+@mixin btn($bg_color, $color, $bg_color__active, $color__active) {
+    text-align: center;
+    border-radius: 5px;
+    padding: 14px 24px;
+    cursor: url('../img/Cursor\ -\ Hand.png'), pointer;
+    background-color: $bg_color;
+    color: $color;
+    transition: all .3s ease;
+    text-decoration: none;
+    &:hover {
+        background-color: $bg_color__active;
+        color: $color__active;
+    }
+}
+
+@mixin sub-title() {
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #738697;
+}
+
+@mixin title() {
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #142B35;
+}
+
+@mixin description() {
+    font-weight: 400;
+    font-size: 16px;
+    color: #5B6E76;
+}

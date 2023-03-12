@@ -1,0 +1,58 @@
+.header {
+    background-image: url('../img/header_img__full.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    .hero {
+        display: block;
+        background-color: rgba(55, 46, 46, 0.4);
+        padding-top: 350px;
+        padding-bottom: 120px;
+        &__text {
+            max-width: 55%;
+            color: #fff;
+            &__title {
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 47px;
+                margin-bottom: 16px;
+                text-transform: capitalize;
+                border-left: 2px solid #F2B91D;
+                padding-left: 32px;
+                position: relative;
+                left: -32px;
+            }
+            &__description {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 27px;
+                max-width: 75%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        .hero {
+            padding-top: 200px;
+            padding-bottom: 40px;
+            &__text {
+                max-width: 100%;
+                &__title {
+                    font-size: 20px;
+                    line-height: 23px;
+                    margin-bottom: 15px;
+                    padding-left: 8px;
+                    position: relative;
+                    left: -11px;
+                }
+                &__description {
+                    font-size: 14px;
+                    line-height: 21px;
+                }
+            }
+        }
+    }
+    
+}

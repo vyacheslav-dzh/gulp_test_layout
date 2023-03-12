@@ -1,0 +1,106 @@
+.blog {
+    padding: 80px 0;
+    &__sub-title {
+        @include sub-title();
+        margin-bottom: 8px;
+    }
+    &__title_n_btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        
+        h2 {
+            @include title();
+        }
+
+        a {
+            @include btn(transparent, #3A98B2, #3A98B2, #fff);
+            border: 1px solid #3A98B2;
+            text-transform: capitalize;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap:16px;
+        &__card {
+            border-radius: 5px;
+            box-shadow: 1px 1px 12px rgba(71, 71, 71, 0.03);
+            &__img {
+                width: 100%;
+                border-radius: 5px; // я бы у нижних границ изобрпжения убрал, а то режет глаза
+            }
+            &__text {
+                padding: 24px;
+                &__date {
+                    @include description();
+                    font-size: 14px;
+                    margin-bottom: 8px;
+                }
+                &__title {
+                    font-weight: 600;
+                    font-size: 18px;
+                    color: #142B35;
+                    margin-bottom: 16px;
+                }
+                &__description {
+                    @include description();
+                    line-height: 167.3%;
+                }
+            }
+            &:hover {
+                box-shadow: 1px 1px 12px rgba(71, 71, 71, 0.06);
+                //box-shadow: 1px 1px 12px rgba(71, 71, 71, 0.1);
+                cursor: url('../img/Cursor\ -\ Hand.png'), pointer;
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 768px) {
+    .blog {
+        display: block;
+        padding: 40px 0;
+        &__sub-title {
+            font-size: 12px;
+        }
+        &__title_n_btn {
+            display: block;
+            margin-bottom: 32px;
+            h2 {
+                font-size: 20px;
+                line-height: 32px;
+                display: block;
+                margin-bottom: 32px;
+            }
+            a {
+                display: block;
+                max-width: 120px;
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+        &__cards {
+            justify-content: center;
+            &__card {
+                margin-bottom: 32px;
+                &__text {
+                    padding: 16px;
+                    &__date {
+                        margin-bottom: 4px;
+                    }
+                    &__title {
+                        margin: 0;
+                    }
+                    &__description {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
